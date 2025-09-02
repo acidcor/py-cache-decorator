@@ -10,6 +10,6 @@ def cache(func: Callable) -> Callable:
         else:
             print("Calculating new result")
             result = func(*args)
-            cashe_dics[*args] = result
+            cashe_dics[args] = result
             return result
     return casher
