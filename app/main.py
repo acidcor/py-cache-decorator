@@ -6,7 +6,7 @@ def cache(func: Callable) -> Callable:
     def casher(*args) -> Any:
         if args in cashe_dics:
             print("Getting from cache")
-            return cashe_dics[*args]
+            return cashe_dics[args]
         else:
             print("Calculating new result")
             result = func(*args)
